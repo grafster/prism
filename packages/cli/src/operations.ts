@@ -32,7 +32,7 @@ export async function getHttpOperationsFromSpec(specFilePathOrObject: string | o
     ops[i] = bundleTarget({
       document: {
         ...result,
-        __target__: op,
+        __target__: '/api/' + op,
       },
       path: '#/__target__',
       cloneDocument: false,
